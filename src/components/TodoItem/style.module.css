@@ -1,0 +1,69 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-left: 15px;
+  box-sizing: border-box;
+
+  font-size: 18px;
+  line-height: 24px;
+
+  border-bottom: solid 1px #C4C4C4;
+}
+
+.listItem input[type="checkbox"] {
+  display: none;
+}
+
+.listItem input[type="checkbox"] + label {
+  position: relative;
+  display: block;
+  padding-left: 65px;
+
+  cursor: pointer;
+}
+
+.listItem label {
+  flex-grow: 1;
+}
+
+.listItem input[type="checkbox"] + label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  border: solid 1px #C4C4C4;
+  border-radius: 50%;
+}
+
+.listItem input[type="checkbox"]:checked + label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M23.6485 3.53887C23.1799 3.07022 22.4202 3.07022 21.9515 3.53887L7.57472 17.9158L2.04853 12.3896C1.57992 11.9209 0.820171 11.921 0.351468 12.3896C-0.117188 12.8582 -0.117188 13.6179 0.351468 14.0866L6.72618 20.4612C7.19465 20.9298 7.95497 20.9295 8.42325 20.4612L23.6485 5.23594C24.1172 4.76733 24.1171 4.00753 23.6485 3.53887Z' fill='%23C4C4C4'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.listItem_completed {
+  color: #CDCDD5;
+}
+
+.listItemBtn {
+  margin-left: auto;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M30.4852 11.3935L22.0001 19.8786L13.5147 11.3933C12.9294 10.8079 11.9789 10.8079 11.3933 11.3935C10.808 11.9788 10.808 12.9293 11.3933 13.5147L19.8787 22L11.3933 30.4853C10.808 31.0707 10.808 32.0212 11.3933 32.6065C11.9789 33.1921 12.9294 33.1921 13.5147 32.6067L22.0001 24.1214L30.4852 32.6065C31.0708 33.1921 32.0213 33.1921 32.6066 32.6067C33.1922 32.0212 33.1922 31.0707 32.6066 30.4852L24.1215 22L32.6066 13.5148C33.1922 12.9293 33.1922 11.9788 32.6066 11.3933C32.0213 10.8079 31.0708 10.8079 30.4852 11.3935V11.3935Z' fill='%23C4C4C4'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='30' height='30' fill='white' transform='translate(0.786804 22) rotate(-45)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+}
